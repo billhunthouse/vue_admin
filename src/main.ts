@@ -16,3 +16,5 @@ directive(app);
 other.elSvg(app);
 
 app.use(pinia).use(router).use(ElementPlus).use(i18n).use(VueGridLayout).mount('#app');
+// app.use(pinia).use(router).use(ElementPlus).use(VueGridLayout).mount('#app');
+
