@@ -24,7 +24,7 @@ export default {
 		menu2: '菜单2',
 		funIndex: '功能',
 		funTagsView: 'tagsView 操作',
-		funCountup: '数字滚动',
+		funCountup: '接口测试',
 		funWangEditor: 'Editor 编辑器',
 		funCropper: '图片裁剪',
 		funQrcode: '二维码生成',
@@ -70,10 +70,10 @@ export default {
 		visualizingLinkDemo1: '数据可视化演示1',
 		visualizingLinkDemo2: '数据可视化演示2',
 		personal: '个人中心',
-		tools: '工具类集合',
-		layoutLinkView: '外链',
-		layoutIframeViewOne: '内嵌 iframe1',
-		layoutIframeViewTwo: '内嵌 iframe2',
+		// tools: '工具类集合',
+		// layoutLinkView: '外链',
+		// layoutIframeViewOne: '内嵌 iframe1',
+		// layoutIframeViewTwo: '内嵌 iframe2',
 	},
 	staticRoutes: {
 		signIn: '登录',
@@ -181,12 +181,5 @@ export default {
 		copyTextSuccess: '复制成功！',
 		copyTextError: '复制失败！',
 	},
-	upgrade: {
-		title: '新版本升级',
-		msg: '新版本来啦，马上更新尝鲜吧！不用担心，更新很快的哦！',
-		desc: '提示：更新会还原默认配置',
-		btnOne: '残忍拒绝',
-		btnTwo: '马上更新',
-		btnTwoLoading: '更新中',
-	},
+	
 };
