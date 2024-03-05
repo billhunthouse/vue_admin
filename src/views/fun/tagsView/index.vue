@@ -1,11 +1,7 @@
 <template>
 	<div class="fun-tagsview layout-pd">
-		<NoticeBar
-			text="已删除非当前页 tagsView 演示，后续有时间可以再加回来！，tagsview 支持多标签（参数不同）、单标签共用（参数不同）"
-			background="#ecf5ff"
-			color="#409eff"
-		/>
-		<el-card shadow="hover" header="tagsView 当前页演示" class="mt15">
+		
+		<el-card shadow="hover" header="请输入要审核的数据信息" class="mt15">
 			<div class="flex-warp">
 				<div class="flex-warp-item">
 					<div class="flex-warp-item-box">

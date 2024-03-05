@@ -91,7 +91,7 @@ const state = reactive({
 		{
 			num1: '125,12',
 			num2: '-12.32',
-			num3: '订单统计信息',
+			num3: '接口请求数统计',
 			num4: 'fa fa-meetup',
 			color1: '#FF6462',
 			color2: '--next-color-primary-lighter',
