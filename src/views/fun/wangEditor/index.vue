@@ -35,6 +35,10 @@
 				<el-form-item label="值" prop="name">
 					<el-input v-model="ruleForm.name" />
 				</el-form-item>
+
+				<el-form-item label="状态" prop="region">
+					<el-input v-model="Result.name" />
+				</el-form-item>
 <!--				<el-form-item label="Activity count" prop="count">-->
 <!--					<el-select-v2-->
 <!--							v-model="ruleForm.count"-->
@@ -239,6 +243,19 @@ const formSize = ref('default')
 const ruleFormRef = ref<FormInstance>()
 const ruleForm = reactive<RuleForm>({
 	name: '请输入',
+	region: '',
+	count: '',
+	date1: '',
+	date2: '',
+	delivery: false,
+	type: [],
+	resource: '',
+	desc: '',
+})
+
+
+const Result = reactive<RuleForm>({
+	name: '查询中',
 	region: '',
 	count: '',
 	date1: '',
