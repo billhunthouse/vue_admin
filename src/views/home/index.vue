@@ -196,7 +196,7 @@ const initLineChart = () => {
 	const option = {
 		backgroundColor: state.charts.bgColor,
 		title: {
-			text: '政策补贴额度',
+			text: '接口请求曲线',
 			x: 'left',
 			textStyle: { fontSize: '15', color: state.charts.color },
 		},
