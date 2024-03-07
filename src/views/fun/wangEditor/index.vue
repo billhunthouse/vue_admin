@@ -1,3 +1,5 @@
+
+
 <template>
 	<div class="layout-pd">
 		<el-card shadow="hover" header="AML状态查询审核">
@@ -42,6 +44,7 @@
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
 import type { FormInstance, FormRules } from 'element-plus'
+import axios from 'axios'
 
 interface RuleForm {
 	values: string
@@ -58,7 +61,7 @@ interface RuleForm {
 const formSize = ref('default')
 const ruleFormRef = ref<FormInstance>()
 const ruleForm = reactive<RuleForm>({
-	values: '请输入',
+	values:'',
 	term: '',
 	count: '',
 	date1: '',
@@ -88,15 +91,29 @@ const rules = reactive<FormRules<RuleForm>>({
 	],
 })
 
-const submitForm = (formEl) => {
+//
+
+const submitForm = async (formEl) => {
 	if (!formEl) return
 	formEl.validate((valid) => {
 		if (valid) {
 			// 在这里执行表单提交的操作
 			console.log('表单提交成功！')
 			console.log(ruleForm)
-			console.log("根据:" + ruleForm.term + "查询")
-			console.log("具体值是:" + ruleForm.values )
+			console.log("根据：" + ruleForm.term + "查询")
+			console.log("具体值是：" + ruleForm.values)
+
+			// 发送POST请求
+			axios.post('https://www.baidu.com', {
+				term: ruleForm.term,
+				values: ruleForm.values
+			})
+					.then(response => {
+						console.log('请求成功：', response)
+					})
+					.catch(error => {
+						console.log('请求失败：', error)
+					})
 
 		} else {
 			console.log('表单验证失败！')
