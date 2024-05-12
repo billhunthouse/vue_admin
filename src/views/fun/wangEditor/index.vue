@@ -1,5 +1,4 @@
 
-
 <template>
 	<div class="layout-pd">
 		<el-card shadow="hover" header="AML状态查询审核">
@@ -36,7 +35,7 @@
 					<el-button @click="resetForm(ruleFormRef)">Reset</el-button>
 				</el-form-item>
 			</el-form>
-		
+
 		</el-card>
 	</div>
 </template>
@@ -84,7 +83,6 @@ const Result = reactive<RuleForm>({
 	resource: '',
 	desc: '',
 })
-
 const rules = reactive<FormRules<RuleForm>>({
 	values: [
 		{ min: 3, max: 80, message: 'Length should be 9 to 80', trigger: 'blur' },

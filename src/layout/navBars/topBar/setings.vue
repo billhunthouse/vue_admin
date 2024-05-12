@@ -471,7 +471,7 @@ const onColorPickerChange = () => {
 };
 // 2、菜单 / 顶栏
 const onBgColorPickerChange = (bg: string) => {
-	document.documentElement.style.setProperty(`--next-bg-${bg}`, themeConfig.value[bg]);
+	// document.documentElement.style.setProperty(`--next-bg-${bg}`, themeConfig.value[bg]);
 	if (bg === 'menuBar') {
 		document.documentElement.style.setProperty(`--next-bg-menuBar-light-1`, getLightColor(getThemeConfig.value.menuBar, 0.05));
 	}
@@ -566,17 +566,17 @@ const onAddDarkChange = () => {
 	else body.setAttribute('data-theme', '');
 };
 // 4、界面显示 --> 开启水印
-const onWartermarkChange = () => {
-	getThemeConfig.value.isWartermark ? Watermark.set(getThemeConfig.value.wartermarkText) : Watermark.del();
-	setLocalThemeConfig();
-};
-// 4、界面显示 --> 水印文案
-const onWartermarkTextInput = (val: string) => {
-	getThemeConfig.value.wartermarkText = verifyAndSpace(val);
-	if (getThemeConfig.value.wartermarkText === '') return false;
-	if (getThemeConfig.value.isWartermark) Watermark.set(getThemeConfig.value.wartermarkText);
-	setLocalThemeConfig();
-};
+// const onWartermarkChange = () => {
+// 	getThemeConfig.value.isWartermark ? Watermark.set(getThemeConfig.value.wartermarkText) : Watermark.del();
+// 	setLocalThemeConfig();
+// };
+// // 4、界面显示 --> 水印文案
+// const onWartermarkTextInput = (val: string) => {
+// 	getThemeConfig.value.wartermarkText = verifyAndSpace(val);
+// 	if (getThemeConfig.value.wartermarkText === '') return false;
+// 	if (getThemeConfig.value.isWartermark) Watermark.set(getThemeConfig.value.wartermarkText);
+// 	setLocalThemeConfig();
+// };
 // 5、布局切换
 const onSetLayout = (layout: string) => {
 	Local.set('oldLayout', layout);
@@ -667,7 +667,7 @@ onMounted(() => {
 			// 深色模式
 			if (getThemeConfig.value.isIsDark) onAddDarkChange();
 			// 开启水印
-			onWartermarkChange();
+			// onWartermarkChange();
 			// 语言国际化
 			if (Local.get('themeConfig')) locale.value = Local.get('themeConfig').globalI18n;
 			// 初始化菜单样式等
